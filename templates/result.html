@@ -1,9 +1,7 @@
 <html>
 <head>
-    <!-- Import Google Fonts for typography -->
     <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;700&family=Lato:wght@400;700&display=swap" rel="stylesheet">
     <style>
-        /* Style the body with a gradient background and centered content */
         body {
             font-family: 'Lato', sans-serif;
             background: linear-gradient(to right, #0072ff, #00c6ff);
@@ -14,8 +12,7 @@
             margin: 0;
         }
 
-        /* Style the container holding the welcome message */
-        .welcome-container {
+        .result-container {
             background-color: white;
             padding: 40px;
             border-radius: 10px;
@@ -25,25 +22,28 @@
             animation: fadeIn 1s ease-in;
         }
 
-        /* Add a fade-in animation for the container */
         @keyframes fadeIn {
             from { opacity: 0; transform: translateY(-20px); }
             to { opacity: 1; transform: translateY(0); }
         }
 
-        /* Style the h1 welcome message */
-        h1 {
+        h2 {
             font-family: 'Oswald', sans-serif;
-            font-size: 48px;
+            font-size: 36px;
             color: #333;
             margin: 0;
+        }
+
+        .prediction-value {
+            font-size: 48px;
+            color: #ff6b6b;
+            font-weight: bold;
         }
     </style>
 </head>
 <body>
-    <!-- Container with the welcome message -->
-    <div class="welcome-container">
-        <h1>Welcome to the Home Page</h1>
+    <div class="result-container">
+        <h2>THE FWI prediction is <span class="prediction-value">{{results}}</span></h2>
     </div>
 </body>
 </html>
